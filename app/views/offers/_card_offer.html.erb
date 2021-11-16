@@ -1,0 +1,12 @@
+ <div>
+    <% @offers.each do |offer| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= link_to offer.title, offer_path(offer) %></h2>
+          <h4><%= offer.category %></h4>
+          <p><%= offer.description %></p>
+        </div>
+      </div>
+    <% end %>
+</div>
