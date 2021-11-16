@@ -1,0 +1,8 @@
+<h1>here are the offers</h1>
+ <div class="row">
+    <% @offers.each do |offer| %>
+        <%= link_to offer_path(offer), do %>
+            <%= offer.name %>
+        <% end %>
+      </div>
+    <% end %>
