@@ -1,9 +1,9 @@
 <h1>here are the offers</h1>
- <div class="row">
+<br>
+ <div>
     <% @offers.each do |offer| %>
-    <ol>
-    <li><%= link_to offer.title, offer_path(offer) %></li>
-    </ol>
-
-        <% end %>
-      </div>
+      <ul>
+        <li><%= link_to offer.title, offer_path(offer) %></li>
+      </ul>
+    <% end %>
+  </div>
