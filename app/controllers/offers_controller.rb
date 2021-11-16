@@ -20,6 +20,12 @@ class OffersController < ApplicationController
 
   def create
     @offer = Offer.new(offer_params)
+    @offer.user = current_user
+    if @offer.save
+      redirect_to dashboard_path
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -29,7 +35,7 @@ class OffersController < ApplicationController
   private
 
   def set_offer
-    @offer = Offer.find[:id]
+    @offer = Offer.find(params[:id])
   end
 
   def offer_params

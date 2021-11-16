@@ -1,6 +1,11 @@
 class BookingsController < ApplicationController
   before_action :set_params, only: [:show]
 
+
+  def index
+    @bookings = current_user.bookings
+  end
+
   def show
   end
 
@@ -13,8 +18,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @offer = Offer.find(params[:offer_id])
     @booking.offer = @offer
+    @booking.user = current_user
     if @booking.save
-      redirect_to dashboard_path(dashboard)
+      redirect_to dashboard_path
     else
       render :new
     end

@@ -3,3 +3,9 @@
 <p>Last name: <%= @user.last_name %></p>
 <p>Bio: <%= @user.bio %></p>
 <p>Skillset: <%= @user.skillset %></p>
+
+<% @offers.each do |offer| %>
+  <% if offer.user == @user %>
+    <%= link_to offer.title, offer_path(offer) %>
+  <% end %>
+<% end %>

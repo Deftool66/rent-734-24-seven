@@ -1,0 +1,7 @@
+<h1>Your booking requests</h1>
+
+<% @bookings.each do |booking| %>
+  <% if booking.user == current_user %>
+    <p><%= link_to booking.offer.title, booking_path(booking) %></p>
+  <% end %>
+<% end %>

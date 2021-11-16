@@ -1,6 +1,14 @@
 <h1>Your Dashboard</h1>
 
+
+  <p>My offers:</p>
+<% @offers.each do |offer| %>
+  <% if offer.user == current_user %>
+  <p><%= link_to offer.title, offer_path(offer) %></p>
+  <% end %>
+<% end %>
+<%# current_user.last_name  %>
+<br>
+  <%= link_to "Create offer", new_offer_path %>
+  <br>
   <%= link_to "Update my profile", edit_user_registration_path(current_user) %>
-  <p><%= @my_offers %></p>
-  <p><%= @my_bookings %></p>
-  <p>See my requests</p>
