@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <h1 style="text-align: center">Pages#home</h1>
+  <%= link_to "Log in", new_user_session_path %>
+  <%= link_to "Sign up", new_user_registration_path %>
+  <%= link_to "Edit profile", edit_user_registration_path(current_user) %>
+  <p>Find me in app/views/pages/home.html.erb</p>
+</div>
