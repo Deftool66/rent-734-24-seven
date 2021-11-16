@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @booking.offer = @offer
     if @booking.save
-      redirect_to root_path
+      redirect_to dashboard_path(dashboard)
     else
       render :new
     end
