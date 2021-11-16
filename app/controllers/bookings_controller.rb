@@ -1,8 +1,5 @@
 class BookingsController < ApplicationController
   before_action :set_params, only: [:show]
-  def index
-    @bookings = Booking.all
-  end
 
   def show
   end
