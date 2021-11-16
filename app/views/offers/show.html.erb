@@ -3,3 +3,6 @@
 <p><%= @offer.description %></p>
 <h4><%= @offer.start_time %></h4>
 <h4><%= @offer.end_time %></h4>
+
+
+<%= link_to "Book offer", new_offer_booking_path(@offer) %>
