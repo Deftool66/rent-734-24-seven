@@ -13,6 +13,7 @@ class OffersController < ApplicationController
 
   def update
     @offer.update(offer_params)
+    redirect_to dashboard_path
   end
 
   def new
