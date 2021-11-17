@@ -11,6 +11,7 @@
           <h2><%= link_to offer.title, offer_path(offer) %></h2>
           <h4><%= offer.category %></h4>
           <p><%= offer.description %></p>
+          <%= link_to "Delete offer", offer_path(offer), method: :delete, data: {confirm: 'Are you sure?'} %>
         </div>
       </div>
   <% end %>

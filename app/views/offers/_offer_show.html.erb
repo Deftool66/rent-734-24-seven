@@ -1,11 +1,16 @@
 <div class='offer-card'>
   <img src="https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3270&q=80" alt="">
   <div class='offer-card-info'>
-    <h1><%= @offer.title %></h1>
+    <h1><%= @offer.title %> by <%= @offer.user.first_name %> <%= @offer.user.last_name %></h1>
     <h5>Category: <%= @offer.category %></h4>
     <p>Description: <%= @offer.description %></p>
     <h4>Start time: <%= @offer.start_time.strftime("%d/%m/%Y")  %></h4>
     <h4>End time: <%= @offer.end_time.strftime("%d/%m/%Y")  %></h4>
   </div>
-   <a class="btn btn-success" href="http://localhost:3000/offers/<%= @offer.id %>/bookings/new">Book offer</a>
+  <% if @offer.user != current_user %>
+  <%# raise %>
+    <%= link_to new_offer_booking_path(@offer) do %>
+      <div class="btn btn-success">Book offer</div>
+    <% end %>
+  <% end %>
 </div>
