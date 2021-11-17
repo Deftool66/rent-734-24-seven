@@ -1,8 +1,11 @@
+<div class="offer-form">
+<h3>Create a new offer</h3>
 <%= simple_form_for @offer do |f| %>
           <%= f.input :title, placeholder: 'title' %>
           <%= f.input :description, placeholder: 'Description' %>
           <%= f.input :category, placeholder: 'Drama' %>
           <%= f.input :start_time, placeholder: 'start' %>
           <%= f.input :end_time, placeholder: 'end' %>
-          <%= f.submit class: 'btn btn-flat' %>
+          <%= f.submit class: 'btn btn-primary' %>
         <% end %>
+</div>
