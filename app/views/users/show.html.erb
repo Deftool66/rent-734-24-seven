@@ -1,11 +1,5 @@
 <br>
-<p>First Name: <%= @user.first_name %></p>
-<p>Last name: <%= @user.last_name %></p>
+<%= render "user_show_card" %>
 <p>Bio: <%= @user.bio %></p>
-<p>Skillset: <%= @user.skillset %></p>
 
-<% @offers.each do |offer| %>
-  <% if offer.user == @user %>
-    <%= link_to offer.title, offer_path(offer) %>
-  <% end %>
-<% end %>
+<%= render "user_offer_card" %>

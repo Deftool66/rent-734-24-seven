@@ -1,8 +1,7 @@
-
-<%= render "dashboard_card" %>
-<% @offers.each do |offer| %>
-  <% if offer.user == current_user %>
-  <div class="card-product">
+ <div>
+    <% @offers.each do |offer| %>
+    <% if offer.user == @user %>
+      <div class="card-product">
         <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80" />
         <div class="card-product-infos">
           <h2><%= link_to offer.title, offer_path(offer) %></h2>
@@ -10,13 +9,6 @@
           <p><%= offer.description %></p>
         </div>
       </div>
-  <% end %>
-<% end %>
-<%# current_user.last_name  %>
-<br>
-
-  <a class="btn btn-success" href="http://localhost:3000/offers/new">New Offer</a>
-
-
-
-  <a class="btn btn-success" href="http://localhost:3000/users/edit.<%= current_user.id %>">Update Profile</a>
+      <% end %>
+    <% end %>
+</div>
