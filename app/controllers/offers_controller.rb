@@ -31,6 +31,7 @@ class OffersController < ApplicationController
 
   def destroy
     @offer.destroy
+    redirect_to dashboard_path
   end
 
   private
