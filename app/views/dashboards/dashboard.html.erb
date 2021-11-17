@@ -1,5 +1,8 @@
 
 <%= render "dashboard_card" %>
+
+<br><h3>Your offers:</h3>
+<br>
 <% @offers.each do |offer| %>
   <% if offer.user == current_user %>
   <div class="card-product">
@@ -15,8 +18,10 @@
 <%# current_user.last_name  %>
 <br>
 
-  <a class="btn btn-success" href="http://localhost:3000/offers/new">New Offer</a>
+<%= link_to new_offer_path do  %>
+  <div class="btn btn-success">New Offer</div>
+  <% end %>
 
-
-
-  <a class="btn btn-success" href="http://localhost:3000/users/edit.<%= current_user.id %>">Update Profile</a>
+  <%= link_to edit_user_registration_path(current_user) do %>
+    <div class="btn btn-success">Edit Profile</div>
+    <% end %>
