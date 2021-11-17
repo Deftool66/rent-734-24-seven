@@ -9,6 +9,7 @@
             <h4>Starting time: <%= link_to booking.start_time, booking_path(booking) %></h4>
             <h4>End time: <%= link_to booking.end_time, booking_path(booking) %></h4>
             <p>Some description about the booking.</p>
+            <p><%= booking.status %></p>
           </div>
         </div>
       </div>
