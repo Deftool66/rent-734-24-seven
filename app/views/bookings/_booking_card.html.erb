@@ -1,0 +1,16 @@
+
+<% @bookings.each do |booking| %>
+  <% if booking.offer.user == current_user %>
+    <div>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2> By <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
+            <h4>Starting time: <%= link_to booking.start_time, booking_path(booking) %></h4>
+            <h4>End time: <%= link_to booking.end_time, booking_path(booking) %></h4>
+            <p>Some description about the booking.</p>
+          </div>
+        </div>
+      </div>
+  <% end %>
+<% end %>
