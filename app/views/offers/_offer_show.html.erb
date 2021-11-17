@@ -7,5 +7,7 @@
     <h4>Start time: <%= @offer.start_time.strftime("%d/%m/%Y")  %></h4>
     <h4>End time: <%= @offer.end_time.strftime("%d/%m/%Y")  %></h4>
   </div>
-   <a class="btn btn-success" href="http://localhost:3000/offers/<%= @offer.id %>/bookings/new">Book offer</a>
+   <%= link_to new_offer_booking_path(@offer) do %>
+   <div class="btn btn-success">Book offer</div>
+   <% end %>
 </div>
