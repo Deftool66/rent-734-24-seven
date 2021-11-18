@@ -1,3 +1,17 @@
 <h1>All classmates</h1>
 
-<%= render "user_card" %>
+<div class="container d-flex justify-content-center align-items-center">
+<div class="row">
+  <% @users.each do |user| %>
+  <%= link_to user_path(user) do %>
+    <div class="container classmates-container col-10">
+      <div class="image" style="background-image: url('https://public.picdrop.com/t/DPNUNSNwgDVVKfcAPmyy.jpg')";>
+      </div>
+      <div class="overlay">
+        <h1 class="texts"><%= user.first_name %> <br><%= user.last_name %></h1>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
