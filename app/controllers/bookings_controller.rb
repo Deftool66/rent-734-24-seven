@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
     elsif status == 'decline'
       @booking.status = 'Declined'
     end
-    @booking.save
+    redirect_to dashboard_path(current_user) if @booking.save
   end
 
   def update

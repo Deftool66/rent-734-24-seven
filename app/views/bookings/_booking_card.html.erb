@@ -1,7 +1,7 @@
 <div class="pending-card">
 <h3>Pending bookings:</h3>
 <% @bookings.each do |booking| %>
-  <% if booking.offer.user == current_user && booking.status == 'pending' %>
+  <% if booking.offer.user == current_user && booking.status == 'Pending' %>
     <div>
         <div class="card-product">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
