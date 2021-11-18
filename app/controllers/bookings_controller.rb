@@ -20,6 +20,7 @@ class BookingsController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @booking.offer = @offer
     @booking.user = current_user
+    @booking.status = "Pending"
     if @booking.save
       redirect_to dashboard_path
     else
