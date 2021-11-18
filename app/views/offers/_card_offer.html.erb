@@ -3,8 +3,8 @@
       <div class="card-product">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
-          <h2><%= link_to offer.title, offer_path(offer) %> by <%= link_to offer.user.first_name, user_path(offer.user) %></h2>
-          <h5>Category: <%= offer.category %></h5>
+          <h2><%= offer.category %></h2>
+          <h3><%= link_to offer.title, offer_path(offer) %> by <%= link_to offer.user.first_name, user_path(offer.user) %></h3>
           <p><%= offer.description %></p>
         </div>
       </div>
