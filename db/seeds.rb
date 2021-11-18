@@ -44,3 +44,17 @@ puts "adding 100 offers"
   offer.save!
 end
 puts 'Finished!'
+
+puts 'Adding 5 bookings'
+
+100.times do
+  booking = Booking.new(
+    start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
+    end_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
+    description: Faker::TvShows::Simpsons.quote,
+    status: 'Pending',
+    offer: Offer.all.sample,
+    user: User.all.sample
+  )
+  booking.save
+end
