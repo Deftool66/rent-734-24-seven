@@ -1,0 +1,33 @@
+.booking-show {
+  padding-top: 70px;
+}
+
+.booking-show-info {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-size: cover;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.booking-show > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.booking-show-info h1 {
+  color: #20dd88;
+  font-weight: bold;
+}
+
+.booking-show-info p {
+  color: #564c4d;
+}
+
+.booking-show-info h4 {
+  font-size: small;
+  color: black;
+  font-weight: bolder;
+}

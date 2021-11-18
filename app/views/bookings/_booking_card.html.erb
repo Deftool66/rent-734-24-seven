@@ -1,16 +1,57 @@
-
+<div class="pending-card">
+<h3>Pending bookings:</h3>
 <% @bookings.each do |booking| %>
-  <% if booking.offer.user == current_user %>
+  <% if booking.offer.user == current_user && booking.status == 'pending' %>
     <div>
         <div class="card-product">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-product-infos">
-            <h2> By <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
-            <h4>Starting time: <%= link_to booking.start_time, booking_path(booking) %></h4>
-            <h4>End time: <%= link_to booking.end_time, booking_path(booking) %></h4>
-            <p>Some description about the booking.</p>
+            <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
+            <h4>Start time: <%= link_to booking.start_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
+            <h4>End time: <%= link_to booking.end_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
+            <p>Description <%= booking.description %></p>
+            <p>Status: <%= booking.status %></p>
           </div>
         </div>
-      </div>
+    </div>
   <% end %>
 <% end %>
+</div>
+<div class="accepted-card">
+<h3>Accepted bookings:</h3>
+<% @bookings.each do |booking| %>
+  <% if booking.offer.user == current_user && booking.status == 'Accepted' %>
+    <div>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
+            <h4>Start time: <%= link_to booking.start_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
+            <h4>End time: <%= link_to booking.end_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
+            <p>Description <%= booking.description %></p>
+            <p>Status: <%= booking.status %></p>
+          </div>
+        </div>
+    </div>
+  <% end %>
+<% end %>
+</div>
+<div class="declined-card">
+<h3>Declined bookings:</h3>
+<% @bookings.each do |booking| %>
+  <% if booking.offer.user == current_user && booking.status == 'Declined' %>
+    <div>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
+            <h4>Start time: <%= link_to booking.start_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
+            <h4>End time: <%= link_to booking.end_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
+            <p>Description <%= booking.description %></p>
+            <p>Status: <%= booking.status %></p>
+          </div>
+        </div>
+    </div>
+  <% end %>
+<% end %>
+</div>

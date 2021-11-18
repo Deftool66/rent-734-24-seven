@@ -4,6 +4,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
   margin-bottom: 30px;
+  background-color: #FC1F24 !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .card-trip > img {
@@ -14,7 +17,7 @@
 
 .card-trip h2 {
   font-size: 40px;
-  color: #1EDD88;
+  color: white !important;
   font-weight: bold;
   margin: 0;
 }
@@ -23,6 +26,7 @@
   font-size: 20px;
   opacity: .7;
   margin: 0;
+  color: white !important;
 }
 
 

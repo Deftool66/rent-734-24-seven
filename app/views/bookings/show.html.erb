@@ -1,8 +1,1 @@
-<br><br><br><br><br>
-<h1>Your booking</h1><br>
-
-<h3>Timeframe:</h3>
-<p><strong>Start time:</strong> <%= @booking.start_time %>, <strong>End time:</strong> <%= @booking.end_time %></p>
-<br>
-<h3>Requested by:</h3>
-<p><%= link_to @booking.user.first_name, user_path(@booking.user) %> <%= link_to @booking.user.last_name, user_path(@booking.user) %></p>
+<%= render 'booking_show' %>
