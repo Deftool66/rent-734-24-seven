@@ -6,6 +6,6 @@
       <p>Skillset: <%= @user.skillset %></p>
     </div>
     <h2 class="card-trip-pricing"></h2>
-    <img src="https://picsum.photos/200" class="card-trip-user avatar-bordered" />
+     <%= cl_image_tag @user.photo.key, class:"card-trip-user avatar-bordered" %>
   </div>
 </div>

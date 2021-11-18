@@ -21,7 +21,7 @@
           <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <%= image_tag "https://64.media.tumblr.com/4dace75907afef13ec4a6cfbe43a6b4c/45e0c5bfd3ffb78e-a3/s500x750/f54a2ef3cf0f1d95d684c8cb6d33aed131c0326d.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "All offers", offers_path, class: "dropdown-item" %>
             <%= link_to "My requests", bookings_path, class: "dropdown-item" %>
