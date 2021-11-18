@@ -1,7 +1,15 @@
 
 <%= render "dashboard_card" %>
 
-<br><h3>Your offers:</h3>
+<%= link_to new_offer_path do  %>
+  <div class="btn btn-success">New Offer</div>
+  <% end %>
+
+  <%= link_to edit_user_registration_path(current_user) do %>
+    <div class="btn btn-success">Edit Profile</div>
+    <% end %>
+<br>
+<h3>Your offers:</h3>
 <br>
 <% @offers.each do |offer| %>
   <% if offer.user == current_user %>
@@ -25,10 +33,5 @@
 <%# current_user.last_name  %>
 <br>
 
-<%= link_to new_offer_path do  %>
-  <div class="btn btn-success">New Offer</div>
-  <% end %>
 
-  <%= link_to edit_user_registration_path(current_user) do %>
-    <div class="btn btn-success">Edit Profile</div>
-    <% end %>
+<%= render 'bookings/booking_card' %>

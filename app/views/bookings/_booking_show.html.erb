@@ -1,0 +1,16 @@
+<div class='booking-show'>
+  <img src="https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3270&q=80" alt="">
+  <div class='booking-show-info'>
+    <h1><%= @booking.offer.title %> by <%= @booking.user.first_name %> <%= @booking.user.last_name %></h1>
+    <h5>Category: <%= @booking.offer.category %></h4>
+    <p>Description: <%= @booking.description %></p>
+    <h4>Start time: <%= @booking.start_time.strftime("%d/%m/%Y")  %></h4>
+    <h4>End time: <%= @booking.end_time.strftime("%d/%m/%Y")  %></h4>
+    <%= link_to bookings_path(booking: @booking, name: 'accept') do %>
+      <div class="btn btn-success">Accept</div>
+    <% end %>
+    <%= link_to bookings_path(booking: @booking, name: 'decline') do %>
+    <div class="btn btn-danger">Decline</div>
+    <% end %>
+  </div>
+</div>
