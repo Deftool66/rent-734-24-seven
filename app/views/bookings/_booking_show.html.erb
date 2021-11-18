@@ -6,9 +6,11 @@
     <p>Description: <%= @booking.description %></p>
     <h4>Start time: <%= @booking.start_time.strftime("%d/%m/%Y")  %></h4>
     <h4>End time: <%= @booking.end_time.strftime("%d/%m/%Y")  %></h4>
-    <%= link_to new_offer_booking_path(@offer) do %>
+    <%= link_to bookings_path(booking: @booking, name: 'accept') do %>
       <div class="btn btn-success">Accept</div>
     <% end %>
+    <%= link_to bookings_path(booking: @booking, name: 'decline') do %>
     <div class="btn btn-danger">Decline</div>
+    <% end %>
   </div>
 </div>
