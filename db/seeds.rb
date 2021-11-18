@@ -7,13 +7,14 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 puts "clearning db"
 
 Offer.delete_all
 User.delete_all
 
 puts 'Creating 28 fake users...'
+
+User.create(first_name:  last_name: email: bio: )
 
 28.times do
   user = User.new(
