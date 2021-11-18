@@ -13,4 +13,10 @@
       <div class="btn btn-success">Book offer</div>
     <% end %>
   <% end %>
+    <% if @offer.user == current_user %>
+  <%# raise %>
+    <%= link_to edit_offer_path(@offer) do %>
+      <div class="btn btn-success">Edit offer</div>
+    <% end %>
+  <% end %>
 </div>
