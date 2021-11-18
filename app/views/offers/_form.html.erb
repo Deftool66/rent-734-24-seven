@@ -3,9 +3,9 @@
 <%= simple_form_for @offer do |f| %>
           <%= f.input :title, placeholder: 'title' %>
           <%= f.input :description, placeholder: 'Description' %>
-          <%= f.input :category, placeholder: 'Drama' %>
-          <%= f.input :start_time, placeholder: 'start' %>
-          <%= f.input :end_time, placeholder: 'end' %>
+          <%= f.input :category, :collection =>["JavaScript", "React", "Angular","CSS","Ruby","Python","Node.js","C++","Java"]%>
+          <%= f.input :start_time, as: :date, placeholder: 'start' %>
+          <%= f.input :end_time, as: :date, placeholder: 'end' %>
           <%= f.submit class: 'btn btn-primary' %>
         <% end %>
 </div>
