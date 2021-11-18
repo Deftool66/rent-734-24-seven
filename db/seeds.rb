@@ -25,7 +25,7 @@ user.photo.attach(io: file, filename: "#{user.first_name}_#{user.last_name}.png"
 user.save!
 
 file = URI.open("https://res.cloudinary.com/deftool/image/upload/v1637233586/Classmates/20211012_LeWagon_JST6637_ltqw4j.jpg")
-user = User.new(first_name: "Amelie", last_name: "D’arenberg", email: "Amelie@Darenberg.de", password: "111111", bio: "I previously worked in business as part of buying and merchandising teams in various companies. After working on projects with colleagues in IT in my last role at Zalando, I felt that I was more interested in Tech than in Business. I then started learning to code online and decided to join the bootcamp at Le Wagon. After completing the course, I would like to join a company as a Junior Developer.")
+user = User.new(first_name: "Noemie", last_name: "Brancourt", email: "Noemie@Brancourt.de", password: "111111", bio: "I previously worked in business as part of buying and merchandising teams in various companies. After working on projects with colleagues in IT in my last role at Zalando, I felt that I was more interested in Tech than in Business. I then started learning to code online and decided to join the bootcamp at Le Wagon. After completing the course, I would like to join a company as a Junior Developer.")
 user.photo.attach(io: file, filename: "#{user.first_name}_#{user.last_name}.png", content_type: 'image/png')
 user.save!
 
