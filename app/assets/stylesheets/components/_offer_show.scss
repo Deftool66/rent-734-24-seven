@@ -1,5 +1,13 @@
 .offer-card {
   padding-top: 70px;
+  border-radius: 20px;
+  .btn-danger {
+    border-radius: 20px;
+  }
+  img {
+  border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .offer-card-info {
@@ -10,7 +18,9 @@
   background-size: cover;
   margin-bottom: 30px;
   padding: 15px;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: linear-gradient(#FE7175, #FD1015);
 }
 
 .offer-card > img {
@@ -25,11 +35,11 @@
 }
 
 .offer-card-info p {
-  color: #564c4d;
+  color: black;
 }
 
 .offer-card-info h4 {
   font-size: small;
-  color: black;
+  color: white;
   font-weight: bolder;
 }
