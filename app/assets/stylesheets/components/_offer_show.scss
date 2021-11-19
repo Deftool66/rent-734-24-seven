@@ -1,14 +1,26 @@
 .offer-card {
   padding-top: 70px;
+  border-radius: 20px;
+  .btn-danger {
+    border-radius: 20px;
+  }
+  img {
+  border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .offer-card-info {
   overflow: hidden;
-  background: white;
+  background: red;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
   margin-bottom: 30px;
   padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: linear-gradient(#FE7175, #FD1015);
+
 }
 
 .offer-card > img {
@@ -18,16 +30,16 @@
 }
 
 .offer-card-info h1 {
-  color: #20dd88;
+  color: white;
   font-weight: bold;
 }
 
 .offer-card-info p {
-  color: #564c4d;
+  color: black;
 }
 
 .offer-card-info h4 {
   font-size: small;
-  color: black;
+  color: white;
   font-weight: bolder;
 }
