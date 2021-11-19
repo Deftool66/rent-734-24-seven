@@ -14,8 +14,12 @@
   <body>
 <div class= "page-container d-flex flex-column">
     <% unless current_page?(root_path) %>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar_test' %>
     <%= render 'shared/flashes' %>
+    <% end %>
+    <% if current_page?(classmates_path) %>
+    <div class="banner-classmates">
+    </div>
     <% end %>
     <% if current_page?(root_path) %>
       <%= render 'pages/banner' %>
