@@ -2,8 +2,14 @@
 
 <%= render "user_show_card" %>
 <div class="user-box" id="bio-box">
-  <p id="bio">Bio: <%= @user.bio %></p>
+<div class="bio-text-box">
+  <h3>Bio</h3>
+  </div>
+  <hr>
+  <p id="bio">  <%= @user.bio %></p>
 </div>
 <div class="user-box">
+  <h3><%= @user.first_name %>'s Offers</h3>
+  <hr>
   <%= render "user_offer_card" %>
 </div>

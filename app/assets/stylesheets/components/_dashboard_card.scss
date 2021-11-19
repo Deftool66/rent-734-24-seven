@@ -4,6 +4,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
   margin-bottom: 30px;
+  border-radius: 20px;
 }
 
 .card-trip > img {
@@ -37,8 +38,8 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
-  width: 40px;
+  top: -40px;
+  width: 80px;
 }
 
 .dashboard-offer {
