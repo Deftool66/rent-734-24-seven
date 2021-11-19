@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2021_11_18_115555) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "start_time", default: "2021-11-19 00:00:00"
+    t.datetime "end_time", default: "2021-11-19 00:00:00"
     t.bigint "user_id", null: false
     t.bigint "offer_id", null: false
     t.datetime "created_at", precision: 6, null: false

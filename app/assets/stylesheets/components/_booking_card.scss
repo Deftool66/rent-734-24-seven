@@ -37,3 +37,29 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.card-product :hover {
+  text-decoration: none;
+  color: black;
+}
+
+.card-product-info :hover {
+  text-decoration: none;
+  color: black;
+}
+
+.card-product-info {
+  margin-left: 5px;
+  p {
+    color: black;
+  }
+  h2 {
+    color:black
+  }
+  h4 {
+    color: black;
+  }
+  a {
+    color: black;
+  }
+}

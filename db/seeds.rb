@@ -94,12 +94,12 @@ puts "adding 100 offers"
 #     description: Faker::TvShows::HowIMetYourMother.quote,
 #     category: ["js", "CSS", "HTML", "Ruby"].sample,
 #     start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
-#     end_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
-#     user: User.all.sample
-#     # rand(1..28)
+#     end_time: Faker::Time.forward(days: 5, period: :evening, format: :long),
+#     user: User.all.sample.rand(1..28)
 #   )
 #   offer.save!
 # end
+
 puts 'Finished!'
 
 puts 'Adding 5 bookings'

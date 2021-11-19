@@ -4,11 +4,13 @@
 
 .offer-card-info {
   overflow: hidden;
-  background: white;
+  background: red;
+  color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
   margin-bottom: 30px;
   padding: 15px;
+  border-radius: 20px;
 }
 
 .offer-card > img {
@@ -18,7 +20,7 @@
 }
 
 .offer-card-info h1 {
-  color: #20dd88;
+  color: white;
   font-weight: bold;
 }
 

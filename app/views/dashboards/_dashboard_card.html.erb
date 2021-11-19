@@ -7,5 +7,9 @@
     </div>
     <h2 class="card-trip-pricing"></h2>
     <%= cl_image_tag current_user.photo.key, class:"card-trip-user avatar-bordered" %>
+      <%= link_to edit_user_registration_path(current_user) do %>
+    <div class="fas fa-user-cog icon-btn"></div>
+    <% end %>
+
   </div>
 </div>

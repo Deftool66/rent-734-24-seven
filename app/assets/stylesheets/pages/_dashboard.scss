@@ -46,3 +46,27 @@
  border-radius: 20px;
  margin-bottom: 30px;
 }
+
+.icon-btn {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  margin-left: 40px
+}
+
+.card-product-infos :hover {
+  text-decoration: none;
+  color: black;
+}
+
+.card-product-infos {
+  p {
+    color: black;
+  }
+  h2 {
+    color:black
+  }
+  h4 {
+    color: black;
+  }
+}
