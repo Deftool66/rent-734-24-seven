@@ -1,14 +1,23 @@
 .booking-show {
   padding-top: 70px;
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .booking-show-info {
   overflow: hidden;
-  background: white;
+  background: red;
+  color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
   margin-bottom: 30px;
   padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: linear-gradient(#FE7175, #FD1015);
+
 }
 
 .booking-show > img {
@@ -18,16 +27,20 @@
 }
 
 .booking-show-info h1 {
-  color: #20dd88;
+  color: white;
   font-weight: bold;
 }
 
 .booking-show-info p {
-  color: #564c4d;
+  color: black;
 }
 
 .booking-show-info h4 {
   font-size: small;
-  color: black;
+  color: white;
   font-weight: bolder;
+}
+
+.booking-show-info h5 {
+  color: white;
 }
