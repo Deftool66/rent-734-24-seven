@@ -13,7 +13,7 @@ puts "clearning db"
 Offer.delete_all
 User.delete_all
 
-puts 'Creating 28 fake users...'
+puts 'Creating users...'
 
 file = URI.open("https://res.cloudinary.com/deftool/image/upload/v1637233609/Classmates/20211012_LeWagon_JST5833_q9qbf9.jpg")
 user = User.new(first_name: "Egor", last_name: "Dranev", email: "egor@dranev.de", password: "111111", bio: "Already for a while, I am passionate about the startup world. In 2018, I came to Berlin to pursue a Master's in Management at ESMT Berlin and got a chance to deeply local and EU entrepreneurial scene. I worked for a couple of years at the intersection of business and tech in the product, venture development, and growth-related roles in 4 early-stage tech Berlin-based startups., helping ventures find product-market fit and scale. Besides that, I worked on a couple of my own ideas together with friends, which appeared to be a bit frustrating because of the lack of technical knowledge. Bearing that in mind, I decided that it's time to change my life and learn to code myself. After completing the Bootcamp, I want to either be able to land a technical product manager position at the early-stage startup or quicker fully focus on building one of the current ideas. Or, who knows, doing both. Oh, and I really enjoy working with smart people, that is what I appreciate living in Berlin for:)")
@@ -69,6 +69,67 @@ file = URI.open("https://res.cloudinary.com/deftool/image/upload/v1637233592/Cla
 user = User.new(first_name: "Eric", last_name: "Draheim", email: "Eric@Draheim.de", password: "111111", bio: "Usually I am working as a lighting technician, but during the lockdown I am fallen in love with coding. After a few different online courses I thought, it is time to get serious with coding and that I should do a boot camp, because usually I need a bit pressure to do things and I wanted to meet some new people with a similar mindset and will to learn coding.")
 user.photo.attach(io: file, filename: "#{user.first_name}_#{user.last_name}.png", content_type: 'image/png')
 user.save!
+
+# offer = Offer.new(
+#     title: Faker::App.name,
+#     description: "
+#     Planning of subtasks together with the Angular team
+#     Independent implementation of features within sprints
+#     Working on updating and improving web applications
+#     Fixing bugs that may arise",
+
+#     category: ["JavaScript", "React", "Angular","CSS","Ruby","Pyhon","Node.js","C++","Java"].sample,
+#     start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
+#     end_time: Faker::Time.forward(days: 5, period: :evening, format: :long),
+#     user: User.all.sample.rand(1..28)
+#   )
+#   offer.save!
+# end
+
+
+offer = Offer.new(
+    title: Faker::App.name,
+    description: "
+    Web Designer wanted for crypto project (NFT)
+    I'm looking for someone who's able to make a simple, cool looking website on short notice. We're only looking to have the UI done, but if you can offer development as well, that's a plus.
+    Get in touch for more info!",
+    category: ["JavaScript", "React", "Angular","CSS","Ruby","Pyhon","Node.js","C++","Java"].sample,
+    start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
+    end_time: Faker::Time.forward(days: 5, period: :evening, format: :long),
+    user: User.all.sample
+    #rand(1..28)
+  )
+offer.save!
+
+offer = Offer.new(
+    title: Faker::App.name,
+    description: "
+    Hi people! I'm looking for a tutor that can help me tackle a startup project in JS ecosystem - mainly React with typescript, testing-library, and additional technology when applicable (redux, cypress, and some backend, etc.) I need a few hours a week mainly for advice on how to design/develop a project related to a payment solution and overcome barriers. If there are any experts on the field out there, please DM. Thank you!",
+    category: ["JavaScript", "React", "Angular","CSS","Ruby","Pyhon","Node.js","C++","Java"].sample,
+    start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
+    end_time: Faker::Time.forward(days: 5, period: :evening, format: :long),
+    user: User.all.sample
+  )
+  offer.save!
+
+offer = Offer.new(
+    title: Faker::App.name,
+    description: "
+    Hi! I'm looking for a Webdev for a Project, Your working hours are as flexible as you are. Regardless if it is an appointment at your dentist, your afternoon soccer group or your kids - we always find a solution.",
+
+    category: ["JavaScript", "React", "Angular","CSS","Ruby","Pyhon","Node.js","C++","Java"].sample,
+    start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
+    end_time: Faker::Time.forward(days: 5, period: :evening, format: :long),
+    user: User.all.sample
+  )
+offer.save!
+
+
+
+
+
+
+
 # file = URI.open("https://res.cloudinary.com/deftool/image/upload/v1637242367/Classmates/20211012_LeWagon_JST6524_xkvf0r.jpg")
 # user = User.new(first_name: "Marc", last_name: "Rodenbusch", email: "Marc@Rodenbusch.de", password: "111111")
 # user.photo.attach(io: file, filename: "#{user.first_name}_#{user.last_name}.png", content_type: 'image/png')
@@ -86,7 +147,7 @@ user.save!
 #   user.save!
 # end
 
-puts "adding 100 offers"
+
 
 # 100.times do
 #   offer = Offer.new(
@@ -102,16 +163,16 @@ puts "adding 100 offers"
 # end
 puts 'Finished!'
 
-puts 'Adding 5 bookings'
 
-100.times do
-  booking = Booking.new(
-    start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
-    end_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
-    description: Faker::TvShows::Simpsons.quote,
-    status: 'Pending',
-    offer: Offer.all.sample,
-    user: User.all.sample
-  )
-  booking.save
-end
+
+# 100.times do
+#   booking = Booking.new(
+#     start_time: Faker::Time.backward(days: 5, period: :morning, format: :short),
+#     end_time: Faker::Time.forward(days: 5,  period: :evening, format: :long),
+#     description: Faker::TvShows::Simpsons.quote,
+#     status: 'Pending',
+#     offer: Offer.all.sample,
+#     user: User.all.sample
+#   )
+#   booking.save
+# end
