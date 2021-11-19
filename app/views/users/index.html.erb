@@ -3,7 +3,7 @@
   <% @users.each do |user| %>
   <%= link_to user_path(user) do %>
     <div class="container classmates-container col-10">
-      <div class="image" style="background-image: url('<%= cl_image_path user.photo.key%>')">
+      <div class="image" style="background-image: url('<%= cl_image_path user.photo.key %>')">
       </div>
       <div class="overlay">
         <h1 class="texts"><%= user.first_name %> <br><%= user.last_name %></h1>
