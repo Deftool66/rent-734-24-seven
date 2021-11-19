@@ -1,7 +1,1 @@
-<div class="booking-form">
-<%= simple_form_for [ @offer, @booking] do |f| %>
-  <%= f.input :start_time, as: :date, placeholder: 'start' %>
-  <%= f.input :end_time, as: :date, placeholder: 'end' %>
-  <%= f.submit 'Create booking', class: 'btn btn-primary' %>
-<% end %>
-</div>
+<%= render 'booking_form' %>

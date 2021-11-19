@@ -13,6 +13,7 @@
 .offer-card-info {
   overflow: hidden;
   background: red;
+  color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
   margin-bottom: 30px;
@@ -20,7 +21,6 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-image: linear-gradient(#FE7175, #FD1015);
-
 }
 
 .offer-card > img {
