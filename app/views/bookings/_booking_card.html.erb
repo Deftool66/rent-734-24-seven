@@ -1,61 +1,59 @@
 <div class="pending-card">
-<h3><i class="far fa-clock"></i> Pending bookings:</h3>
-<% @bookings.each do |booking| %>
-  <% if booking.offer.user == current_user && booking.status == 'Pending' %>
-    <div>
-        <div class="card-product">
-        <%= link_to booking_path(booking) do %>
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-info">
-            <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
-            <h4>Start time: <%= booking.start_time.strftime("%d/%m/%Y") %></h4>
-            <h4>End time: <%= link_to booking.end_time.strftime("%d/%m/%Y") %></h4>
-            <p>Description <%= booking.description %></p>
-            <p>Status: <%= booking.status %></p>
-          </div>
+  <h3><i class="far fa-clock"></i> Pending bookings:</h3>
+  <% @bookings.each do |booking| %>
+    <% if booking.offer.user == current_user && booking.status == 'Pending' %>
+      <div class="card-product">
+      <%= link_to booking_path(booking) do %>
+        <%= cl_image_tag booking.user.photo.key, class:"card-img" %>
+        <div class="card-product-infos">
+          <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
+          <h4>Start time: <%= booking.start_time.strftime("%d/%m/%Y") %></h4>
+          <h4>End time: <%= link_to booking.end_time.strftime("%d/%m/%Y") %></h4>
+          <p>Description <%= booking.description %></p>
+          <p>Status: <%= booking.status %></p>
         </div>
-        <% end %>
-    </div>
+      <% end %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 </div>
+
 <div class="accepted-card">
-<h3><i class="far fa-check-circle"></i> Accepted bookings:</h3>
-<% @bookings.each do |booking| %>
-  <% if booking.offer.user == current_user && booking.status == 'Accepted' %>
-    <div>
-        <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-info">
-            <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
-            <h4>Start time: <%= link_to booking.start_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
-            <h4>End time: <%= link_to booking.end_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
-            <p>Description <%= booking.description %></p>
-            <p>Status: <%= booking.status %></p>
-          </div>
+  <h3><i class="far fa-check-circle"></i> Accepted bookings:</h3>
+  <% @bookings.each do |booking| %>
+    <% if booking.offer.user == current_user && booking.status == 'Accepted' %>
+      <div class="card-product">
+      <%= link_to booking_path(booking) do %>
+        <%= cl_image_tag booking.user.photo.key, class:"card-img" %>
+        <div class="card-product-infos">
+          <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
+          <h4>Start time: <%= booking.start_time.strftime("%d/%m/%Y") %></h4>
+          <h4>End time: <%= link_to booking.end_time.strftime("%d/%m/%Y") %></h4>
+          <p>Description <%= booking.description %></p>
+          <p>Status: <%= booking.status %></p>
         </div>
-    </div>
+      <% end %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 </div>
+
 <div class="declined-card">
-<h3><i class="far fa-times-circle"></i> Declined bookings:</h3>
-<% @bookings.each do |booking| %>
-  <% if booking.offer.user == current_user && booking.status == 'Declined' %>
-    <%= link_to booking_path(booking) do %>
-    <div>
-        <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-info">
-            <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
-            <h4>Start time: <%= booking.start_time.strftime("%d/%m/%Y") %></h4>
-            <h4>End time: <%= booking.end_time.strftime("%d/%m/%Y")%></h4>
-            <p>Description <%= booking.description %></p>
-            <p>Status: <%= booking.status %></p>
-          </div>
+  <h3><i class="far fa-times-circle"></i> Declined bookings:</h3>
+  <% @bookings.each do |booking| %>
+    <% if booking.offer.user == current_user && booking.status == 'Declined' %>
+      <div class="card-product">
+      <%= link_to booking_path(booking) do %>
+        <%= cl_image_tag booking.user.photo.key, class:"card-img" %>
+        <div class="card-product-infos">
+          <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
+          <h4>Start time: <%= booking.start_time.strftime("%d/%m/%Y") %></h4>
+          <h4>End time: <%= booking.end_time.strftime("%d/%m/%Y") %></h4>
+          <p>Description <%= booking.description %></p>
+          <p>Status: <%= booking.status %></p>
         </div>
-    </div>
+      <% end %>
+      </div>
+    <% end %>
   <% end %>
-  <% end %>
-<% end %>
 </div>
