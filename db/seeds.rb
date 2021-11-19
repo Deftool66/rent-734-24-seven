@@ -10,6 +10,7 @@ require "open-uri"
 
 puts "clearning db"
 
+Booking.delete_all
 Offer.delete_all
 User.delete_all
 
