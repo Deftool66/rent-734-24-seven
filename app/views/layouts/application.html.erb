@@ -12,7 +12,12 @@
   </head>
 
   <body>
-<div class= "page-container d-flex flex-column">
+<div class= "page-container d-flex flex-column" style="padding-bottom: 100px;">
+    <% if user_signed_in? && current_page?(classmates_path) %>
+    <div class="avatar-div">
+    <%= cl_image_tag current_user.photo.key, class:"card-trip-user avatar-bordered mainpage-avatar" %>
+    </div>
+    <% end %>
     <% unless current_page?(root_path) %>
     <%= render 'shared/navbar_test' %>
     <%= render 'shared/flashes' %>

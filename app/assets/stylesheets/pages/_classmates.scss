@@ -61,3 +61,22 @@
 .classmate-link {
   text-decoration: none;
 }
+
+.classmates-header-text {
+  color: white;
+  border-radius: 20px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+  h1 {
+    font-weight: bolder;
+  }
+  h4 {
+    font-weight: lighter;
+  }
+}
+
+// .top-of-classmates {
+//   position: relative;
+//   height: 100px;
+//   background-color: red;
+//   width: 100vw;
+// }

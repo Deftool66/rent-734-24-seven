@@ -11,3 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.avatar-div {
+  position: relative;
+}
+
+.mainpage-avatar {
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  height: 37px;
+}
