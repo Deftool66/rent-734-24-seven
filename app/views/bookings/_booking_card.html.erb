@@ -4,7 +4,7 @@
   <% if booking.offer.user == current_user && booking.status == 'Pending' %>
     <div>
         <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%= cl_image_tag booking.user.photo.key, class:"card-img" %>
           <div class="card-product-infos">
             <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
             <h4>Start time: <%= link_to booking.start_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
@@ -23,7 +23,7 @@
   <% if booking.offer.user == current_user && booking.status == 'Accepted' %>
     <div>
         <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%= cl_image_tag booking.user.photo.key, class:"card-img" %>
           <div class="card-product-infos">
             <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
             <h4>Start time: <%= link_to booking.start_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
@@ -42,7 +42,7 @@
   <% if booking.offer.user == current_user && booking.status == 'Declined' %>
     <div>
         <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%= cl_image_tag booking.user.photo.key, class:"card-img" %>
           <div class="card-product-infos">
             <h2> <%= booking.offer.title %> booked by <%= link_to booking.user.first_name, user_path(booking.user) %></h2>
             <h4>Start time: <%= link_to booking.start_time.strftime("%d/%m/%Y"), booking_path(booking) %></h4>
